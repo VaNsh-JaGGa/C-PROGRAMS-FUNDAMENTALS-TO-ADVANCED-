@@ -30,7 +30,7 @@ int main(){
     cout<<"please enter the value for convert: ";
     int n;
     cin>>n;
-    int binary = DecimalToBinaryMethod2(n);
+    int binary = DecimalToBinaryMethod1(n);
     cout<<binary;
     return 0;
 }
