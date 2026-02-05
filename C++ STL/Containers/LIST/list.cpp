@@ -1,3 +1,4 @@
+// same like vectors we use list while working in linkedlist DS
 #include<iostream>
 #include<list>
 using namespace std;

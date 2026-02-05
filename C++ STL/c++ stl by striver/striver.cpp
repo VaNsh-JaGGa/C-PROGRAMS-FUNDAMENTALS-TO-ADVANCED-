@@ -1,4 +1,6 @@
 #include<iostream>
+#include<map>
+#include<set>
 #include<vector>
 using namespace std;
 
@@ -113,7 +115,82 @@ void explainVector(){
     cout<<endl;
 }
 
+void explainSet(){
+    // sets 
+    // stores only unique element 
+    // and in ascending order
+    set<int> s1;
+    s1.insert(1111111);
+    s1.insert(11);
+    s1.insert(11);
+    s1.insert(11);
+    s1.insert(111);
+
+    for(int i:s1){
+        cout<<i<<" ";
+    }
+    cout<<endl;
+
+    //finding an element 
+    auto it = s1.find(111);
+    if(it != s1.end()){
+        cout<<*it<<endl;
+    }
+
+    // count -> prints 1 if there is element present and otherwise 0
+    cout<<s1.count(11)<<endl;
+
+    // erase on other file 
+
+    // upper bound (returns an iterator at > element) and lower bound (returns an iterator at >= element)
+    auto it1 = s1.lower_bound(12);
+    auto it2 = s1.upper_bound(111);
+    cout<<*it1;
+    cout<<*it2;
+
+}
+
+void explainMultiSet(){
+    // similar to sets but can store same values and in ascending order
+    multiset<int> ms;
+    ms.insert(1);
+    ms.insert(2);
+    ms.insert(3);
+    ms.insert(3);
+    ms.insert(2);
+    ms.insert(1);
+
+    // find() returns the position
+    ms.erase(ms.find(1));
+    for(int i:ms){
+        cout<<i<<" ";
+    }cout<<endl;
+
+}
+
+void explainMap(){
+    // stores like key value pairs 
+    // Does the mapping in ascending order according to keys. 
+    map<int,string> mpp;
+    mpp[3]="radhika";
+    mpp[1]="Vansh";
+    mpp[1]="Vanshh";
+    mpp[2]="Jagga";
+    mpp.insert({4,"raju"});
+
+    for(auto i : mpp){
+        cout<<i.first<<"->"<<i.second<<endl;
+    }cout<<endl;
+
+    auto it = mpp.find(3);
+    cout<<(*it).first<<"->"<<(*it).second;
+    cout<<endl;
+}
+
 int main(){
     // explainPair();
-    explainVector();
+    // explainVector();
+    // explainSet();
+    // explainMultiSet();
+    // explainMap();
 }

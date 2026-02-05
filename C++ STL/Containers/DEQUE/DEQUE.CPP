@@ -1,3 +1,4 @@
+// same like vectors same like vectors we use deque while working in linkedlist DS
 #include<iostream>
 #include<deque>
 using namespace std;
